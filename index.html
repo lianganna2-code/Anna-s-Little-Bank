@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Send $100 to Anna</title>
-<style>
+  <title>Anna's Cookie Bank</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #fff8dc;
+      text-align: center;
+    }
 
-body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    font-family:Arial;
-}
+    h1 {
+      font-size: 36px;
+      color: #d2691e;
+      margin-bottom: 10px;
+    }
 
-button{
-    font-size:20px;
-    padding:15px 30px;
-    background-color:green;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
+    p {
+      font-size: 20px;
+      color: #8b4513;
+      margin-bottom: 30px;
+    }
 
-button:hover{
-    background-color:darkgreen;
-}
+    /* Cookie button */
+    .cookie-button {
+      width: 120px;
+      height: 120px;
+      background-color: #f4a460;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 3px 3px 6px #a0522d;
+      transition: transform 0.2s;
+    }
 
-</style>
+    .cookie-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Chocolate chips */
+    .chip {
+      width: 15px;
+      height: 15px;
+      background-color: #5c4033;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .chip1 { top: 20px; left: 30px; }
+    .chip2 { top: 50px; left: 60px; }
+    .chip3 { top: 70px; left: 40px; }
+    .chip4 { top: 30px; left: 70px; }
+    .chip5 { top: 60px; left: 20px; }
+
+  </style>
 </head>
-
 <body>
 
-<h1>Support Anna</h1>
+  <h1>Anna's Cookie Bank</h1>
+  <p>Donate $100 to get your virtual cookie!</p>
 
-<p>Click below to send $100.</p>
+  <!-- Replace YOUR-STRIPE-LINK with your real Stripe payment link -->
+  <a href="https://buy.stripe.com/YOUR-STRIPE-LINK">
+    <button class="cookie-button">
+      <div class="chip chip1"></div>
+      <div class="chip chip2"></div>
+      <div class="chip chip3"></div>
+      <div class="chip chip4"></div>
+      <div class="chip chip5"></div>
+    </button>
+  </a>
 
-<a href="https://example-payment-page.com">
-<button>Send $100 to Anna</button>
-</a>
+  <p>Click the cookie to donate and enjoy!</p>
 
 </body>
 </html>
